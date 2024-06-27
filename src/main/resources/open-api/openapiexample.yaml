@@ -1,0 +1,43 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI 3.0
+  version: "1.0"
+tags:
+  - name: worker
+    description: Info about workers
+paths:
+  /worker:
+    get:
+      tags:
+       - worker
+      summary: Find all workers
+      operationId: findAllWorker
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Worker'
+        '400':
+          description: Invalid request
+        '404':
+          description: Workers not found
+      
+components:
+  schemas:
+    Worker:
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        full_name:
+          type: string
+          example: Mag Simpson
+        job_title:
+          type: string
+          example: student
+  
