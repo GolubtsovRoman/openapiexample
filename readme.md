@@ -12,7 +12,7 @@
 - kotlin 2.0.0
 - JDK 21
 - Spring Boot 3.3.1
-- H2 database 2.2.224 (взята дял простоты)
+- H2 database 2.2.224 (взята для простоты)
 - плагин org.openapi.generator 7.6.0
 
 ### Принцип работы
